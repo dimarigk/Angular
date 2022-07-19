@@ -17,13 +17,12 @@ export class PostFormComponent implements OnInit {
 
   addPost () {
     if(this.text.trim() && this.title.trim()) {
-      this.id+=1
       const new_post: interPost = {
         title: this.title,
         text: this.text,
         id:this.id
       }
-
+      this.id+=1
       this.onAdd.emit(new_post)
       
 
