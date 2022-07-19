@@ -1,17 +1,18 @@
-<div class="card" [ngSwitch]="edit">
+<div class="card" [ngSwitch]="edit_switch">
    <H2>{{current_post.title}}</H2>
    <p>{{current_post.text}}</p>
 
    <button class="btn_edit" (click)="removePost()">Удалить</button>
-   <button class="btn_edit" (click)="edit=true">Редактировать</button>
+   <button class="btn_edit" (click)="edit_switch=true">Редактировать</button>
            
    <input *ngSwitchCase="true"
    type="text"
    class="form-control"
    placeholder="Текст"
-   [(ngModel)] = "text"
+   [(ngModel)] = "edit_text"
    >
    
-   <button class="btn_edit" *ngSwitchCase="true" (click)="editPost();edit=false">Принять</button>
+   <button *ngSwitchCase="true" 
+   class="btn_edit" (click)="editPost(); edit_switch=false">Принять</button>
 
 </div>

@@ -21,6 +21,6 @@ export class AppComponent {
   }
 
   removePost(id:any){
-    this.arr_posts = this.arr_posts.filter(p=>p.id!=id)
+    this.arr_posts = this.arr_posts.filter(post=>post.id!=id)
   }
 }

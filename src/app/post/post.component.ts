@@ -8,14 +8,14 @@ import {interPost} from "../app.component"
 })
 export class PostComponent implements OnInit {
   @Input() current_post: interPost
-  @Output() onRemove = new EventEmitter<any>()
+  @Output() onRemove = new EventEmitter<any>() //removePost()
 
-  edit:boolean =false
-  text:string = ""
+  edit_switch:boolean =false
+  edit_text:string = ""
   
   editPost() {
-  this.current_post.text=this.text
-  this.text = ""
+  this.current_post.text=this.edit_text
+  this.edit_text = ""
   
     }
   removePost() {
