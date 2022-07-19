@@ -1,13 +1,13 @@
 <div class="container">
    <h1>Создание блога</h1>
-   <!-- (onAdd) привязан @Output() onAdd post-form.component -->
+   <!-- (onAdd) привязан @Output() onAdd файл post-form.component -->
    <post-form
       (onAdd)="addPost($event)"
    ></post-form>
 
    <hr>
-   <!-- [current_post] привязан @Input() current_post post.component.ts -->
-   <!-- (onRemove) привязан @Output() onRemove  post.component.ts -->
+   <!-- [current_post] привязан @Input() current_post файл post.component.ts -->
+   <!-- (onRemove) привязан @Output() onRemove файл post.component.ts -->
    <post
       *ngFor="let post of arr_posts"   
       [current_post]="post"                    
