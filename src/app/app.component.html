@@ -1,0 +1,15 @@
+<div class="container">
+   <h1>Создание блога</h1>
+   <post-form
+      (onAdd)="addPost($event)"
+   ></post-form>
+
+   <hr>
+
+   <post
+      *ngFor="let post of arr_posts"
+      [current_post]="post"
+      (onRemove)="removePost($event)"
+   ></post>
+</div>
+
